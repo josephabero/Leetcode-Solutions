@@ -1,0 +1,12 @@
+Brute Force:
+	Keep 2 indices and iterate through looking for the two values that sum up to the target.
+
+	Time: O(n^2)
+	Space: O(1)
+
+Optimal:
+	Use hash map to keep track of index for future pair.
+	Can perform in one pass.
+
+	Time: O(n)
+	Space: O(n)
