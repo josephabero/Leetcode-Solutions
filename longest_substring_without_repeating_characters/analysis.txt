@@ -1,0 +1,20 @@
+Longest Substring Without Repeating Characters
+https://leetcode.com/problems/longest-substring-without-repeating-characters
+
+Brute Force:
+	Keep 2 indices and use 2 for loops to iterate through each char.
+	Keep int of longest index as you iterate.
+
+	Time: O(n^2)
+	Space: O(n)
+
+
+Optimal:
+	Sliding Intervals:
+		- Keep 2 indices, iterate through once
+		- If duplicate char found, adjust interval window
+		- Can either use lookup table or substring
+
+
+	Time: O(n)
+	Space: O(min(m, n)) where m is the set of non-duplicate characters

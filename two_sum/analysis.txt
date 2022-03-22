@@ -1,4 +1,5 @@
-Two Sum: https://leetcode.com/problems/two-sum/
+Two Sum:
+https://leetcode.com/problems/two-sum/
 
 Brute Force:
 	Keep 2 indices and iterate through looking for the two values that sum up to the target.
