@@ -1,0 +1,19 @@
+Container With The Most Water
+https://leetcode.com/problems/container-with-most-water
+
+Brute Force:
+	2 For Loops and iterate through each height
+	Use 2 pointers to calculate every area and keep the largest area
+
+	Time: O(n^2)
+	Space: O(1)
+
+Optimal:
+	1 pass loop
+	Keep 2 pointers: Left and Right
+	Take the minimum height between the 2 and use the difference for width
+	Calculate area and compare to max. Move pointer with shorter height.
+	Move pointers closer to each other until max is found.
+
+	Time: O(n)
+	Space: O(1)
