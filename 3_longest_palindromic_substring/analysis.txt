@@ -1,0 +1,22 @@
+Longest Palindromic Substring
+https://leetcode.com/problems/longest-palindromic-substring/
+
+Brute Force:
+	Keep 2 indices: Left and Right.
+	Iterate over every character and evaluate if each substring is palindrome.
+	To evaluate a palindrome, reverse string and compare that it is the same.
+
+	Time: O(n^3)
+	Space: O(1)
+		- Worst case is holding 2 strings with length of input string
+
+
+Optimal:
+	Keep 2 indices: Left and Right.
+	Iterate over each character in input string.
+	Treat each character is center of palindrome and expand around that index while keeping track of longest palindrome.
+	Must handle odd vs even palindrome lengths
+
+
+	Time: O(n^2)
+	Space: O(1)
