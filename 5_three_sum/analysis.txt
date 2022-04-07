@@ -1,0 +1,24 @@
+3Sum
+https://leetcode.com/problems/3sum/
+
+Brute Force:
+	Iterate through all combinations: O(n^3)
+	Must check if solution exists in existing list which includes sorting the potential solutions:
+		O(m) access to list
+		O(1) sorting potential solution list of size 3
+
+	Time: O(n^3 * m)
+	Space: O(m)
+
+Optimal:
+	Sort input list: O(nlog(n))
+	Iterate through list: O(n)
+	Combine solution of Two Sum and Container With Most Water:
+		For inner loop, use 2 pointers and calculate possible solution
+		Move indices based on distance from target
+	Optimize by skipping duplicate values.
+
+	Ultimately: O(nlog(n) + n^2)
+
+	Time: O(n^2)
+	Space: O(m)
