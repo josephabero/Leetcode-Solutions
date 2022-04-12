@@ -1,0 +1,23 @@
+Remove Nth Node From End of List
+https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+
+m = length of linked list
+
+Brute Force:
+
+	m = length of linked list
+	Time: O(2m - n) = O(m)
+	Space: O(1)
+
+Optimal:
+	2 pointers: fast & slow
+	Iterate fast pointer to nth node (creates diff between fast and slow pointer)
+	Iterate together.
+	Handle case where length == n, remove head and return rest of list.
+
+	Alternate solution: recursively iterate to end of list
+
+
+	m = length of linked list
+	Time: O(m)
+	Space: O(m)
