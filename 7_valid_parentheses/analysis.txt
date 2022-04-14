@@ -1,0 +1,17 @@
+Valid Parentheses
+https://leetcode.com/problems/valid-parentheses/
+
+Brute Force:
+	N/A	
+
+Optimal:
+	Use hash for given brackets
+	Iterate over input string and use stack to keep track of bracket pairs:
+		Add to stack if open bracket
+		If closed bracket, pop off stack and make sure it's matching bracket.
+	Handle special cases of odd length string and leftover open brackets.
+
+	m is size of open parentheses
+
+	Time: O(n)
+	Space: O(m)
