@@ -1,0 +1,16 @@
+Merge Two Sorted Lists
+https://leetcode.com/problems/merge-two-sorted-lists/
+
+Optimal:
+	Can be done iteratively or recursively.
+	Use 2 pointers, 1 to keep head of resulting list, 2nd to keep track of tail of resulting list.
+
+	Iterate over both lists: O(m + n)
+	Add nodes to end of list
+
+	Considerations:
+		- Initialize 0 node for resulting list, can return list after the first node
+		- Can break loop early and add rest of the input list to the end of the resulting list.
+
+	Time: O(m + n)
+	Space: O(1)
