@@ -1,0 +1,15 @@
+Valid Anagram:
+https://leetcode.com/problems/valid-anagram
+
+Brute Force (O(1) space):
+	Sort each input string and compare that they are equal.
+
+	Time: O(nlog(n))
+	Space: O(1)
+
+Optimal:
+	Use 2 separate hashmaps to keep count of each character in both input strings.
+	Compare counts as equal.
+
+	Time: O(s + t)
+	Space: O(s + t)
