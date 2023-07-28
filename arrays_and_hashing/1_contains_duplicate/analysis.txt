@@ -1,0 +1,16 @@
+Contains Duplicate:
+https://leetcode.com/problems/contains-duplicate
+
+Brute Force:
+	Iterate through array and compare each element to every other element.
+	Repeat for every index in array.
+
+	Time: O(n^2)
+	Space: O(1)
+
+Optimal:
+	Use set to keep track of elements in array.
+	Can perform in one pass.
+
+	Time: O(n)
+	Space: O(n)
