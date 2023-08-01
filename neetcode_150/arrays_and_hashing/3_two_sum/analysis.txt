@@ -1,0 +1,15 @@
+Two Sum:
+https://leetcode.com/problems/two-sum
+
+Brute Force:
+	Two pointers, iterate through all possible combinations until solution is found.
+
+	Time: O(n^2)
+	Space: O(1)
+
+Optimal:
+	Use hashmap to keep track of value, index pairs as you iterate through list.
+	Allows solution to be found through 1 pass of the list.
+
+	Time: O(n)
+	Space: O(n)
