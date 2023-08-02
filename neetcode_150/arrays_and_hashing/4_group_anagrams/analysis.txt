@@ -1,0 +1,24 @@
+Group Anagrams
+https://leetcode.com/problems/group-anagrams
+
+Brute Force:
+	Use hashmap, iterate through each input string, sort characters.
+	Use characters as key for hashmap and insert into list.
+
+	m = number of input strings
+	n = max length of input string
+
+	Time: O(m  * nlog(n))
+	Space: O(n)
+
+Optimal:
+	Use hashmap, iterate through each input string.
+	Count number of characters in alphabet & encode that as key.
+	For example: "tea" = 1t 1e 1a = 10001000000000000001000000
+
+	m = number of input strings
+	n = max length of input string
+	26 = length of key list
+
+	Time: O(m * n * 26) = O(m * n)
+	Space: O(m * n)
