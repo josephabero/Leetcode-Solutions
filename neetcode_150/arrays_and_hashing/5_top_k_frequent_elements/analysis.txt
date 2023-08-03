@@ -1,0 +1,21 @@
+Top K Frequent Elements
+https://leetcode.com/problems/top-k-frequent-elements/
+
+Brute Force:
+	Use hashmap to gather counts of each character.
+	Sort by number of occurrences or use heap to order by number of occurrences.
+	Heap would pop k times (O(log(n)) for each pop)
+
+	Time: O(nlog(n)) or O(klog(n)) for heap
+	Space: O(2n) = O(n)
+
+Optimal:
+	Use hashmap to gather counts of each character.
+	Use bucket sort idea to group same number of occurrences together.
+		nums = [1, 1, 2, 2, 3, 4]
+		sorted = [[], [3,  4], [1, 1], [], [], [], []]
+
+	Iterate through sorted list of lists in reverse order and get k elements.
+
+	Time: O(n)
+	Space: O(2n) = O(n)
