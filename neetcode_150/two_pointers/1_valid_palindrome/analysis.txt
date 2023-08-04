@@ -1,0 +1,24 @@
+Valid Palindrome
+https://leetcode.com/problems/valid-palindrome
+
+Brute Force:
+	Create copy of string and remove non-alphanumeric characters.
+	Create a copy of the resulting string, but reverse the string.
+	Compare string and reversed string, if the same then it is a palindrome.
+
+	Time: O(n)
+	Space: O(2n) = O(n)
+
+Optimal:
+	Use two pointers: 1 at the start of the string, 1 at the end.
+	Increment and decrement pointers until they meet or cross.
+	Skip non-alphanumeric characters and only compare as lowercase.
+	Repeat until pointers cross or character doesn't match.
+
+	NOTE: To create custom `isalnum()` function, use ASCII characters:
+		ord('A') <= ord(c) <= ord('Z') or
+        ord('a') <= ord(c) <= ord('z') or
+        ord('0') <= ord(c) <= ord('9')
+
+	Time: O(n)
+	Space: O(1)
