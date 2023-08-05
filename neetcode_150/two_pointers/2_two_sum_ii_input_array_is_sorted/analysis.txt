@@ -1,0 +1,21 @@
+Two Sum II: Input Array Is Sorted
+https://leetcode.com/problems/two-sum-ii-input-array-is-sorted
+
+Brute Force:
+	Nested for loops to evaluate every sum combination.
+
+	Time: O(n^2)
+	Space: O(1)
+
+Optimal:
+	Use two pointers: 1 at the start of the string, 1 at the end.
+	Increment and decrement pointers until they meet or cross.
+	If `sum > target`, decrement right pointer.
+	If `sum < target`, increment left pointer.
+
+	Can use this approach because the input is sorted, therefore, we don't
+		need to consider later indexes as the sum is already larger than
+		the target for the minimum sum combination.
+
+	Time: O(n)
+	Space: O(1)
