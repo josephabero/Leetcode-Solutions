@@ -1,0 +1,16 @@
+Container With Most Water
+https://leetcode.com/problems/container-with-most-water
+
+Brute Force:
+	Evaluate every valid combination.
+
+	Time: O(n^2)
+	Space: O(1)
+
+Optimal:
+	Use two pointers: left and right.
+	Keep track of largest product and move indexes closer until they cross.
+	Move the index where the value is the lower of the two.
+
+	Time: O(n)
+	Space: O(1)
