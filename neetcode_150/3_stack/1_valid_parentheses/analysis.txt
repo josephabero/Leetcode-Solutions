@@ -1,0 +1,15 @@
+Valid Parentheses
+https://leetcode.com/problems/valid-parentheses
+
+Optimal:
+	Create hashmap to map closing brackets to open brackets.
+	If an open bracket, append to stack.
+	If a closed bracket, pop the last bracket off of the stack and check that
+		it is a matching bracket.
+
+	Consider Edge Cases:
+		- More closing brackets than open brackets
+		- More open brackets than closing brackets
+
+	Time: O(n)
+	Space: O(n)
