@@ -1,0 +1,12 @@
+Min Stack
+https://leetcode.com/problems/min-stack
+
+Optimal:
+	Each stack operation must be O(1).
+	Use 2 lists: stack and minimum stack.
+	Keep track of minimum values at each index of the stack.
+		Whenever there is a "push" or "pop", append and pop from minimum stack
+		as well.
+
+	Time: O(1)
+	Space: O(2n)= O(n)
