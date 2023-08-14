@@ -1,0 +1,14 @@
+Evaluate Reverse Polish Notation
+https://leetcode.com/problems/evaluate-reverse-polish-notation
+
+Optimal:
+	Use 1 list for stack.
+	Iterate through all tokens:
+		If integer (positive or negative), add to stack.
+		If operator, pop the last 2 integers from stack & evaluate result.
+			Add result to stack.
+
+	Able to make assumptions because input string is always valid.
+
+	Time: O(2n) = O(n)
+	Space: O(n)
