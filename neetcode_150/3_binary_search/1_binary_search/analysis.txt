@@ -1,0 +1,26 @@
+Binary Search
+https://leetcode.com/problems/binary-search
+
+Optimal:
+	Binary Search:
+		- Requires sorted list
+		- Use 2 pointers: left and right
+		- Find middle with the 2 pointers: left + (right - left) // 2
+			- This calculation avoids integer overflow in C++
+		- Compare middle value to target:
+			- If target is larger, ignore left half: left = middle + 1
+			- If target is smaller, ignore right half: right = middle - 1
+		- If found, return index
+		- If not, return -1
+
+	- Edge cases:
+		- Empty list: []
+			- Falls through and returns -1
+		- List of 1 index: [9], target = 9 or [9], target = 5
+			- Use 'left <= right'
+			- This evaluates middle index, which leads to index 0
+			- If target, returns index
+			- If not found, breaks on next iteration, then returns -1
+
+	Time: O(log(n))
+	Space: O(1)
