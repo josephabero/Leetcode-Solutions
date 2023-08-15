@@ -1,0 +1,28 @@
+Search a 2D Matrix
+https://leetcode.com/problems/search-a-2d-matrix
+
+Brute Force:
+	Iterate through each row in the matrix.
+	Perform binary search if row is valid range of values.
+
+	Time: O(mlog(n))
+	Space: O(1)
+
+Optimal:
+	Rows are sorted and the first integer of each row is greater than the last integer of the previous row.
+
+	2 major steps:
+		1. Use binary search to find row with valid range of target values
+		2. Perform binary search once row is found
+
+	Perform binary search on the matrix lists (top & bottom pointers).
+		Use the first and last values in the middle row to determine how to
+		adjust the indexes.
+			- If last value is larget than target, move top pointer
+			- If first value is smaller than target, move bottom pointer
+			- Else, row with valid range is found
+
+	Perform normal binary search on row.
+
+	Time: O(log(m) + log(n)) = O(log(m + n))
+	Space: O(1)
