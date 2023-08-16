@@ -1,0 +1,33 @@
+Longest Repeating Character Replacement
+https://leetcode.com/problems/longest-repeating-character-replacement
+
+Brute Force:
+	Consider all possible substrings and count max substring with replacements < k.
+
+	Time: O(n^2)
+	Space: O(1)
+
+Good Enough Solution:
+	Use:
+		- 2 pointers for sliding window
+		- hashmap for counts of all characters in substring
+
+	Steps:
+		- Initialize 2 pointers at index 0
+		- Iterate through each character, add to substring hashmap
+		- Verify if valid substring based on replacements (k)
+			- (window_length - count_of_largest_char) < k
+			- To do, iterate through character list, return max count
+				- O(26) because always 26 characters
+		- Update length of max string
+
+	Time: O(26 * n)
+	Space: O(26)
+
+Optimal:
+	- Same as 'Good Enough' Solution
+	- Make optimization of caching & updating maximum frequency variable as we iterate
+		- Prevents needing to iterate over hashmap every time we reach an invalid substring
+
+	Time: O(n)
+	Space: O(26)
