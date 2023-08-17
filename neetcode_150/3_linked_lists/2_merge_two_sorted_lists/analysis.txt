@@ -1,0 +1,17 @@
+Merge Two Sorted Lists
+https://leetcode.com/problems/merge-two-sorted-lists
+
+Optimal:
+	Use 2 pointers: dummy 'head' node and current.
+	Initialize current to head.
+	Iterate through both lists together.
+		Choose lower value, then increment corresponding list pointer.
+		Must manage rearranging of pointers.
+			1. Set current.next to lower valued node (Attaches node to result list)
+			2. Set current to node
+			3. Set current.next to None (Detaches node from input linked list)
+
+	Return head.next to ignore dummy node
+
+	Time: O(m + n)
+	Space: O(1)
