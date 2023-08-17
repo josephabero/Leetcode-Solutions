@@ -1,0 +1,49 @@
+Reverse Linked List
+https://leetcode.com/problems/reverse-linked-list
+
+Optimal:
+	Iterative approach to reverse list.
+	If you can alter original linked list (pass-by-reference):
+		1. Create copy of first node
+		2. Iterate through each node
+		3. Re-route next pointers to point to previous node (starting with copied first node)
+			i.e.
+				Input: 1 -> 2 -> 3
+				Output: 1
+						1 <- 2 <- 3
+
+		Cons: Leaves a floating node
+
+	Use 2 pointers, 'previous' and 'current':
+		- Initialize previous as None and current as the first node
+		- Use temporary variable to save node after current
+		- Re-route pointers:
+			- Set current.next to previous
+			- Set previous to current
+			- Set current to the saved temporary variable
+
+		i.e.
+			P    C -> T
+			P <- C    T
+			1 <- C,P  T
+			1 <- P    C,T
+
+	Time: O(n)
+	Space: O(1)
+
+
+Recursive:
+	Recursive approach to reverse list.
+	- Approach as subproblems: Take current node, reverse the linked list following it
+	- Break down subproblems until node is None (Essentially, end of the list)
+	- Once the end of the list is reached, "reverse" the list:
+		- Set current.next to "previous" (Returned value of recursive call)
+		- Set previous.next to None
+
+	i.e.
+			1 -> 2 -> C -> None
+			1    None <- 2 <- C
+			None <- 1 <- 2 <- C
+
+	Time: O(n)
+	Space: O(n)
