@@ -1,0 +1,44 @@
+Reorder List
+https://leetcode.com/problems/reorder-list
+
+Optimal:
+	3 Steps:
+		1. Find middle of input list, split into 2 lists
+		2. Reverse second list (second half)
+		3. Merge lists
+
+	1. Find middle of input list, split into 2 lists
+		- Use fast and slow pointers
+			- Condition: fast and fast.next
+
+		1 -> 2 -> 3 -> 4
+		SF
+
+		1 -> 2 -> 3 -> 4
+			 S    F
+
+		S is the middle of the list
+
+	2. Reverse second list (second half)
+		- Use 2 pointers: 'previous' and 'current'
+		- Rearrange pointers as iterating through:
+			- Use temporary pointer to save reference to list, set to current.next
+			- Set current.next to previous
+			- Set previous to current
+			- Set current to temporary
+
+		P    C -> T
+		P <- C    T
+		1 <- CP   T
+		1 <- P    TC
+
+	3. Merge lists
+		Iterate through both lists together
+		Since we found the middle, there are 2 cases: odd and even.
+		Loop:
+			- Condition: list1 or list2
+			- If either exists, add.
+		Add in order: list1 then list2
+
+	Time: O(3n) = O(n)
+	Space: O(1)
