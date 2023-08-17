@@ -11,22 +11,15 @@ https://leetcode.com/problems/reverse-linked-list
 # Iterative: T - O(n), S - O(1)
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        # Return if empty
-        if not head:
-            return head
+        prev, curr = None, head
 
-        # Copy first node
-        tail = ListNode(head.val, None)
-
-        # Re-route following original nodes to the copied node
-        right = head.next
-        while right is not None:
-            left = right
-            right = right.next
-            left.next = tail
-            tail = left
+        while curr:
+            temp = curr.next
+            curr.next = prev
+            prev = curr
+            curr = temp
         
-        return tail
+        return prev
 
 # Recursive: T - O(n), S - O(n)
 class Solution:
