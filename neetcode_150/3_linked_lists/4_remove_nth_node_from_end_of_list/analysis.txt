@@ -1,0 +1,18 @@
+Remove Nth Node From End of List
+https://leetcode.com/problems/remove-nth-node-from-end-of-list
+
+Optimal:
+	Use 2 pointers:
+		1. Create Dummy node
+		2. Initialize pointers
+			- Left to Dummy
+			- Right to Head
+		3. Iterate right node 'n' number of nodes
+		4. Then, iterate both left and right nodes together until end of list
+			- This moves left node to the node *prior* to target node
+		5. Remove target node
+		6. Return dummy.next (Ignore dummy node)
+
+
+	Time: O(n)
+	Space: O(1)
