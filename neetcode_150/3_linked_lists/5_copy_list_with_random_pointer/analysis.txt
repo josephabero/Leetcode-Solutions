@@ -1,0 +1,20 @@
+Copy List with Random Pointer
+https://leetcode.com/problems/copy-list-with-random-pointer
+
+Optimal:
+	2-Pass ALgoirthm:
+		1. First Pass to copy nodes and cache node-to-random mapping
+		2. Second Pass to assign copied 'next' and 'random' pointers to copied nodes.
+
+	Mapping:
+		{
+			Node 1 From Initial List: Copied Node 1,
+			Node 2 From Initial List: Copied Node 2,
+		}
+
+	Notes to consider:
+		- Only need 1 current pointer (Copy pointer used in 2nd pass)
+		- Must perform safe gets for 'None' lookups in 2nd pass & return
+
+	Time: O(n)
+	Space: O(n)
