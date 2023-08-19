@@ -1,0 +1,16 @@
+Add Two Numbers
+https://leetcode.com/problems/add-two-numbers
+
+Optimal:
+	Iterate over both inputs lists together.
+	Calculate sum of values.
+		- Determine and save if there is carry
+	Create node and only save ones place.
+	Increment node pointers.
+
+	Consider:
+		- If there is leftover carry, continue the loop to create new 1 node
+		- If list ends, consider value of node as 0
+
+	Time: O(n)
+	Space: O(1)
