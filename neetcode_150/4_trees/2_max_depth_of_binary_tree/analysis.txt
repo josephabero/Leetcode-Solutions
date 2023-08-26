@@ -1,0 +1,22 @@
+Maximum Depth Of Binary Tree
+https://leetcode.com/problems/maximum-depth-of-binary-tree
+
+Optimal:
+	- Perform DFS to reach leaf nodes.
+		- Count depth as we return back up to root node
+
+		Example Tree:
+		            A
+                B       C
+              D   E   F   G
+
+        Counts:
+		            3
+                2       1
+              1   1
+
+        Space Complexity is determined by maximum number of recursive calls.
+        - For a binary tree, it's guaranteed to be log(n) depth.
+
+	Time: O(n)
+	Space: O(log(n))
