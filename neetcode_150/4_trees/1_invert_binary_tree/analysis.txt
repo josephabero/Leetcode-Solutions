@@ -1,0 +1,19 @@
+Invert Binary Tree
+https://leetcode.com/problems/invert-binary-tree
+
+Optimal:
+    - Perform DFS to reach leaf node
+        - Swap Left & Right nodes
+
+    Space Complexity is determined by maximum number of recursive calls.
+        - This is the maximum depth of the binary tree
+
+                    A
+                B       C
+              D   E   F   G
+
+        - For a binary tree, it's guaranteed to be log(n) depth.
+        - Therefore, there will be log(n) recursive calls to reach a leaf node (i.e. 'D' node)
+
+    Time: O(n)
+    Space: O(log(n))
