@@ -1,0 +1,28 @@
+Binary Tree Level Order Traversal
+https://leetcode.com/problems/binary-tree-level-order-traversal/
+
+Optimal:
+	2 ways:
+		1. Perform DFS
+		2. Perform BFS
+
+	If performing DFS,
+		1. Use helper function to traverse.
+		2. Keep a `tree` result list that we add results to as we traverse.
+		3. Append list to result list at index as we traverse
+			- Must check if index is valid before appending
+
+	If performing BFS (more natural solution),
+		1. Use `collections.deque` as operations will be faster than normal list operations
+			- `popleft()` is O(1) vs list `pop(0)` is O(n)
+		2. Create a queue to traverse through the tree
+		3. Create a tree result list to append list as we traverse.
+		4. Iterate through each node in the level
+			- Create an intermediate list at each level
+			- For each node in the level:
+				- Add left and right nodes to queue
+				- Append node value to intermediate list
+		5. Once all nodes in the level have been traversed, append intermediate list to result tree
+
+	Time: O(n)
+	Space: O(log(n) + n) = O(n)
