@@ -1,0 +1,15 @@
+Same Tree
+https://leetcode.com/problems/same-tree/
+
+Optimal:
+	Iterate through both trees together:
+
+	Trees are not the same if:
+		- Number of nodes differs or
+		- Any node's values differ
+
+	If we traverse through the entirety of both trees and there are no differences,
+	then they are the same trees.
+
+	Time: O(n)
+	Space: O(log(n))
