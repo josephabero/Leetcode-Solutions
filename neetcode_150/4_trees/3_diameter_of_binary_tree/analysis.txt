@@ -1,0 +1,22 @@
+Diameter of Binary Tree
+https://leetcode.com/problems/diameter-of-binary-tree/
+
+Optimal:
+	Perform DFS to iterate through each node.
+
+	At each node, calculate max_diameter:
+		- Use helper function to perform DFS
+		- Allows us to save max_diameter as we traverse via recursion
+
+		max_diameter = current max vs (left + right + 2)
+
+	Base Case:
+		Treat null children as -1
+		Treat leaf nodes as 0
+
+	As we bubble up from recursion, return the max diameter between the child nodes
+		max(left, right)
+
+
+	Time: O(n)
+	Space: O(log(n))
