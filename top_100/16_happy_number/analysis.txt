@@ -1,0 +1,15 @@
+Happy Number
+https://leetcode.com/problems/happy-number/
+
+Optimal:
+	Update input n to new number and calculate sum of the squares for input.
+
+	Use set to keep track of already calculated sum of squares.
+
+	If sum == 1 or sum is in set, then break.
+
+	n is the number of iterations required.
+	m is the max length of the calculated sum
+
+	Time: O(n)
+	Space: O(m)
