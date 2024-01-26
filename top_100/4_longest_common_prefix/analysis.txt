@@ -1,0 +1,12 @@
+Longest Common Prefix
+https://leetcode.com/problems/longest-common-prefix
+
+Optimal:
+	Keep pointer to leading index of each string.
+	Iterate through each string in the array of strings and check each letter is the same.
+	If any one of the strings differs, return result.
+
+	n is length of the string array, m is the shortest length string in the array.
+
+	Time: O(n * m)
+	Space: O(1)
