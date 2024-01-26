@@ -1,0 +1,10 @@
+Delete Node in a Linked List
+https://leetcode.com/problems/delete-node-in-a-linked-list
+
+Optimal:
+	We are not given the head node. The node does not need to be deleted from memory, it just needs to be removed from the linked list. The node also does not need to be preserved.
+
+	Therefore, we can simply overwrite the given node and reassign the next pointer to exclude the next node.
+
+	Time: O(1)
+	Space: O(1)
