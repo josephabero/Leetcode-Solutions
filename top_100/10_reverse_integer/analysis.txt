@@ -1,0 +1,12 @@
+Reverse Integer
+https://leetcode.com/problems/reverse-integer/
+
+Optimal:
+	Iterate through each digit in the input integer and extract the ones digit to build up the resulting reversed integer.
+
+	Remember to handle negatives for modulo operations. `mod` to get ones digit then divide/multiply by 10 to manipulate input/output integers.
+
+	As the result reaches the upper/lower limits for maximum/minimum integer, compare the reversed integer to the upper/lower limits excluding the ones place. This ensures that the system doesn't overflow, because it's limited to 32 bits.
+
+	Time: O(n)
+	Space: O(1)
