@@ -1,0 +1,21 @@
+Maximum Subarray
+https://leetcode.com/problems/maximum-subarray/
+
+Brute Force:
+    Iterate through each combination and add up all numbers within subarray.
+
+    Time: O(n^3)
+    Space: O(1)
+
+    Small optimization, iterate through each combination and keep current sum as you iterate through.
+
+    Time: O(n^2)
+    Space: O(1)
+
+Optimal:
+    Iterate through with 2 pointers, each number and keep current sum as you iterate.
+
+    If new index is a positive number and is prefixed by a negative sum, skip negative sum and restart current count.
+
+    Time: O(n)
+    Space: O(1)
