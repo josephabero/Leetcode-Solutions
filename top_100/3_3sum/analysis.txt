@@ -1,0 +1,25 @@
+3Sum
+https://leetcode.com/problems/3sum
+
+Brute Force:
+	Nested for loops to evaluate every triplet sum combination.
+
+	Time: O(n^3)
+	Space: O(1)
+
+Optimal:
+	First, sort input list.
+	Iterate over sorted list of numbers, then use Two Sum sorted solution on remaining list.
+		Use two pointers: 1 at the start of the string, 1 at the end.
+		Increment and decrement pointers until they meet or cross.
+		If `sum > target`, decrement right pointer.
+		If `sum < target`, increment left pointer.
+
+	Duplicate triplets are not allowed, so if first index is the same as the previous
+		first index, then continue.
+	For inner Two Sum calculation, if second index is the same as the previous
+		second index, then continue.
+
+	Time: O(nlogn + n^2) = O(n^2)
+	Space: O(1) or O(n) = O(n)
+		-  Depends on sorting algorithm

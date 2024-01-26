@@ -1,0 +1,15 @@
+Valid Parentheses
+https://leetcode.com/problems/valid-parentheses/
+
+Optimal:
+	Use a dictionary/hashmap to save open/closed bracket pairs.
+	Use a stack to keep track of order of brackets.
+
+	Once closed bracket is found, pop and verify the open bracket is the matching bracket.
+
+	Edge cases:
+		- More open brackets than closing brackets
+		- More closing brackets than open brackets
+
+	Time: O(n)
+	Space: O(n)

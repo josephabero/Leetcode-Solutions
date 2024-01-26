@@ -1,0 +1,19 @@
+Best Time to Buy and Sell Stock
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock
+
+Brute Force:
+	Use nested for loops to iterate through each possible combination.
+	Return the maximum profit calculated.
+
+	Time: O(n^2)
+	Space: O(1)
+
+Optimal:
+	Use 2 pointers: left and right.
+	Start left at first index, right at next index.
+	Iterate through numbers, keep track of maximum profit.
+		If right index value > left index value, update the left index to right.
+		Continue iterating through rest of numbers.
+
+	Time: O(n)
+	Space: O(1)

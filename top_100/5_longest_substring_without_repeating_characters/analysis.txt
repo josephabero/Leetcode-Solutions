@@ -1,0 +1,16 @@
+Longest Substring Without Repeating Characters
+https://leetcode.com/problems/longest-substring-without-repeating-characters
+
+Optimal:
+	Use 2 pointers: left and right.
+	Initialize left and right pointers to 0 index.
+	Use set of strings to keep track of current substring.
+	Keep track of largest substring.
+
+	Iterate through all characters with right index.
+		If right character exists within set, increment left pointer until character is removed.
+		(This operation is O(1) since we are using a set for the substring)
+	Add right character to set, update max count if necessary.
+
+	Time: O(n)
+	Space: O(n)
