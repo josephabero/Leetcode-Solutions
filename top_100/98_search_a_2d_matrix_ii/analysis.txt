@@ -1,0 +1,25 @@
+Search a 2D Matrix II
+https://leetcode.com/problems/search-a-2d-matrix-ii
+
+Brute Force:
+	Because each row and each column is sorted in ascending order, but not sorted uniformly like for Search a 2D Matrix, then you can only perform binary search on each row or each column.
+
+	Iterate through each element in the row or column, perform binary search on the complement.
+
+	Time: O(nlog(m))
+	Space: O(1)
+
+Optimal:
+	Use the approach of trying to find a path.
+	2 Facts:
+		1. Left to Right increases in value
+		2. Bottom to Top decreases in value
+
+	So we can start in the bottom left corner and compare values.
+
+	1. Check current element if it's target value
+	2. If not and right is less than target, go right
+	3. Else, go up.
+
+	Time: O(m + n)
+	Space: O(1)
