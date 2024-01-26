@@ -1,0 +1,18 @@
+Sqrt(x)
+https://leetcode.com/problems/sqrtx/
+
+Brute Force:
+	Calculate products starting from the index 0.
+	Try up to when product is equal to or larger than given x.
+	If equal, return index. If larger, return index - 1.
+
+	Time: O(n^2)
+	Space: O(1)
+
+Optimal:
+	Perform binary search to decrease the search space.
+	Try products for midpoint index.
+	If product is larger, check left side.
+	If product is smaller, check right side AND save product in case it is the result.
+	Time: O(log(n))
+	Space: O(1)
