@@ -1,0 +1,8 @@
+Number of Islands
+https://leetcode.com/problems/number-of-islands
+
+Optimal:
+	Graph Traversal with BFS/DFS.
+
+	Time: O()
+	Space: O()
