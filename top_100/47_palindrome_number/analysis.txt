@@ -1,12 +1,9 @@
-<title>
-<url>
-
-Brute Force:
-
-	Time: O()
-	Space: O()
+Palindrome Number
+https://leetcode.com/problems/palindrome-number
 
 Optimal:
+	Reverse the input integer as a string and compare as strings.
+	Negative numbers will not be considered palidromes due to the negative sign.
 
-	Time: O()
-	Space: O()
+	Time: O(n)
+	Space: O(1)
