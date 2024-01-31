@@ -1,0 +1,14 @@
+Container With Most Water
+https://leetcode.com/problems/container-with-most-water/
+
+Optimal:
+	Use 2 pointers: left and right.
+	Left is the start of the list, right points to the end.
+
+	Calculate the area of the container using these two pointers.
+	If it is the largest so far, save the product.
+	Advance the pointer which has the smaller value of the two.
+	Repeat until pointers meet.
+
+	Time: O(n)
+	Space: O(1)
