@@ -1,0 +1,18 @@
+Move Zeroes
+https://leetcode.com/problems/move-zeroes/
+
+Brute Force:
+	Iterate through list, if zero is found, remove the zero and append it to the end.
+	This requires the use of the `pop()` function which is O(n).
+
+	Time: O(n^2)
+	Space: O(1)
+
+Optimal:
+	Use fast and slow pointer.
+	Fast pointer iterates through list. Slow pointer will keep track of 0 that must be moved to the right of the list.
+
+	As we iterate, we swap 0s with the left-most non-zero number and repeat until all zeroes are moved to the right of the list.
+
+	Time: O(n)
+	Space: O(1)
