@@ -1,0 +1,19 @@
+Roman to Integer
+https://leetcode.com/problems/roman-to-integer/
+
+Optimal:
+	Use a hashmap to store the roman numeral to integer pairs.
+	Iterate through input string, add up numerals from left to right.
+
+	2 keys of info:
+		1. Roman Numerals decrease left to right
+		2. Have to handle case where smaller Roman Numeral preceding a larger one results in subtraction:
+			"IV": 5 - 1
+			"XC": 100 - 10
+
+		Could store every combination in the hashmap, but that's too many to realistically add.
+		There can only be 1 numeral preceding a larger one, therefore, can simple look ahead to the next character and see if we need to subtract.
+
+
+	Time: O(n)
+	Space: O(1)
