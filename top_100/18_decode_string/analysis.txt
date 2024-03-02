@@ -1,0 +1,17 @@
+Decode String
+https://leetcode.com/problems/decode-string/
+
+Optimal:
+	Use stack to maintain order of characters between nested brackets.
+	If we find a closing bracket (']'), then we know we need to decode string.
+	As we iterate through, if it is not a closing bracket, we simply add to stack.
+
+	When we hit a closing bracket, we:
+		1. Pop all of the characters within the brackets (maintain original order)
+		2. Pop all of the numbers before the opening bracket (maintain original order)
+			- Must consider numbers with multiple digits ("54[ab]")
+
+	At the end, iterate through stack and add to the result string.
+
+	Time: O(2n) = O(n)
+	Space: O(n)
