@@ -1,0 +1,14 @@
+Product Of Array Except Self
+https://leetcode.com/problems/product-of-array-except-self
+
+Optimal:
+	General Idea:
+		Calculate product left & right of each index.
+
+		To do so,
+		1. Calculate prefix product (left to right)
+		2. Calculate postfix product (right to left)
+		3. Multiple product left and right of each index
+
+	Time: O(n)
+	Space: O(n)
