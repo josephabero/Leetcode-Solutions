@@ -1,0 +1,16 @@
+Merge Intervals
+https://leetcode.com/problems/merge-intervals
+
+Optimal:
+	Sort intervals by starting value so that we can iterate through cleanly.
+	Create result list and add intervals as we iterate through.
+	Merge intervals which overlap.
+
+	Must consider cases where the following intervals are within interals already stored.
+	Example:
+		[1,4] and [2,3]
+
+		The result should be [1,4]
+
+	Time: O(nlog(n) + n) = O(nlog(n))
+	Space: O(n)
