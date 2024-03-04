@@ -1,0 +1,14 @@
+Valid Sudoku
+https://leetcode.com/problems/valid-sudoku/
+
+Optimal:
+	Use 3 list of sets (essentially 3 matrices) to keep track of values visited for rows, columns, and squares.
+
+	Use sets so that lookup for values visited is O(1)
+
+	Iterate over the entire board, as we visit, enter values into these corresponding matrices.
+
+	For each value, check the corresponding values row, column, and square to see if it exists, if it does, then the Sudoku board is invalid.
+
+	Time: O(n * m), could argue it is O(81) since it is a hard constraint board.
+	Space: O(3(n * m))
