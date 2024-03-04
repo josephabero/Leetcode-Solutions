@@ -1,0 +1,15 @@
+Search in Rotated Sorted Array
+https://leetcode.com/problems/search-in-rotated-sorted-array/
+
+Optimal:
+	Perform binary search to acheive log(n) time complexity.
+		- Use 3 pointers: left, middle, right
+
+	Add conditional checks to take into account rotation:
+		1. Check validity of value ranges in sorted array:
+			- Left < Middle
+			- Middle < Right
+		2. If a valid section, check if target is within range, if not, then check other side
+
+	Time: O(log(n))
+	Space: O(1)
