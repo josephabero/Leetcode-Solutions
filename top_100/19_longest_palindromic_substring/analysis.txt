@@ -1,0 +1,22 @@
+Longest Palindromic Substring
+https://leetcode.com/problems/longest-palindromic-substring
+
+Brute Force:
+	Iterate over every substring, then check if the substring is a palindrome.
+
+	Finding every combination of substring: O(n^2)
+	Checking if substring is palindrome: O(n)
+		- Using 2 pointers, start from outside indices and check if equal.
+
+	Time: O(n^3)
+	Space: O(1)
+
+Optimal:
+	* Dynamic Programming *
+
+	Iterate through each character in substring and expand from the center.
+	Check if surrounding characters make a substring.
+		- Must consider both EVEN and ODD palindromes.
+
+	Time: O(n^2)
+	Space: O(1)
