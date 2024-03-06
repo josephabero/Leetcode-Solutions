@@ -1,0 +1,10 @@
+Number of Islands
+https://leetcode.com/problems/number-of-islands
+
+Optimal:
+	Iterate over each node in the matrix and perform graph traversal with BFS/DFS for each node containing the value of "1". Use a set to keep track of visited nodes as you perform BFS/DFS.
+
+	As we iterate through each node, if the value is "1" and the node hasn't been visited yet, then we have found a new island. Therefore, perform BFS and increase the count for number of islands.
+
+	Time: O(n * m)
+	Space: O(n * m)
