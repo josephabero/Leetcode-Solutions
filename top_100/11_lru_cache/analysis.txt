@@ -1,0 +1,25 @@
+LRU Cache
+https://leetcode.com/problems/lru-cache/
+
+Optimal:
+	Use a dictionary to represent cache, then use a doubly linked list to maintain recency.
+
+	Linked list must be used for recency in order to maintain recency with O(1) time complexity.
+
+	The cache will use key, value pairs of the intended key, and the value is a pointer to the linked list node.
+
+	The linked list itself will hold the true integer values of the key.
+
+	For the linked list node, the left hand side will be the most recent while the right hand side will be the least recently used. These references are required to insert and delete from the linked list with O(1) time.
+
+	Every time we 'put', we:
+		1. Remove the key if it exists
+		2. Always create a new node and insert into cache & linked list
+		3. Remove node if capacity of cache exceeds defined capacity
+
+	Every time we 'get' we:
+		1. Remove & insert back into linked list if key exists
+		2. Return valid value (-1 if doesn't exist)
+
+	Time: O(1)
+	Space: O(2n) = O(n)
