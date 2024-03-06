@@ -1,0 +1,11 @@
+Course Schedule
+https://leetcode.com/problems/course-schedule
+
+Optimal:
+	Create adjacency list from prerequisites and perform DFS on adjacency list.
+	If there is a cycle found in the graph, then it is not possible to complete the courses.
+
+	Time: O(V + E)
+		- Time complexity to perform DFS
+	Space: O(V + E)
+		- Space complexity of adjacency list
