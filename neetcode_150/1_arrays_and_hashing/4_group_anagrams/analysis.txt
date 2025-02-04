@@ -21,4 +21,4 @@ Optimal:
 	26 = length of key list
 
 	Time: O(m * n * 26) = O(m * n)
-	Space: O(m * n)
+	Space: O(m)
